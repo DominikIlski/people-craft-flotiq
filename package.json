@@ -1,0 +1,46 @@
+{
+  "name": "flotiq_user_api",
+  "version": "2.0.1",
+  "description": "_Getting_started_This_is_your_Flotiq_User_API_that_allows_you_to_access_your_data_through_the_Content_API_that_you_defined___Access_to_data_There_are_several_methods_that_you_can_use_to_access_your_data__Live_API_docs___available_via_codeTry_it_out_code_button_available_next_to_each_endpoint___Copying_example_code_on_the_right_side_of_each_endpoint__By_downloading_the_SDKs_available_in_mulitple_languages___By_downloading_the_Postman_collection_and_importing_it_into_Postman__Each_of_these_methods_is_described_in_length_in_the__user_documentation_https__flotiq_com_docs____Authorization_In_order_to_make_use_of_the_provided_documentation_example_code_SDKs_and_so_on___you_will_need_to_pull_out_your_API_key__We_recommend_that_you_start_with_the_ReadOnly_API_Key_which_will_allow_you_to_make_all_the_GET_requests_but_will_error_out_when_you_try_to_modify_content__Please_remember_to_replace_the_key_for_POST_PUT_and_DELETE_calls__Its_also_possible_to_use_scoped_API_keys___you_can_create_those_in_the_API_keys_section_of_the_Flotiq_user_interface__This_will_allow_you_to_create_a_key_that_only_authorizes_access_to_a_specific_content_type__or_a_set_of_content_types_if_you_choose_so__Read_more_about_how_to_use_and_create_API_keys_in_the__API_keys_documentation_https__flotiq_com_docs_API____Object_access_Once_you_define_a_Content_Type_it_will_become_available_in_your_Content_API_as_a_set_of_endpoints_that_will_allow_you_to_work_with_objects__create__list__update__delete__batch_create__retrieve_single_object__Hydration_When_you_build_Content_Types_that_have_relation_to_others_your_objects_will_optionally_support_hydration_of_related_entities__The_endpoints_that_support_object_retrieval_accept_a_hydrate_parameter_which_can_be_used_to_easily_fetch_hydrated_objects__Since_this_breaks_the_standard_REST_concepts___its_not_enabled_by_default_but_its_a_very_handy_feature_that_allows_to_reduce_the_amount_of_HTTP_requests_sent_over_the_wire_and_we_strongly_recommend_to_use_it_",
+  "license": "Unlicense",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "prepack": "npm run build",
+    "test": "mocha --require @babel/register --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "@babel/cli": "^7.0.0",
+    "superagent": "3.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
